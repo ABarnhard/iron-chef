@@ -3,8 +3,8 @@
 function Recipe(o){
   this.name = o.name;
   this.photo = o.photo;
-  this.ingredients = o.ingredients;
-  this.directions = o.directions;
+  this.ingredients = o.ingredients.split(',').map(function(s){return s.trim();});
+  this.directions = o.directions.split(',').map(function(s){return s.trim();});
 }
 
 Object.defineProperty(Recipe, 'collection', {
@@ -13,6 +13,11 @@ Object.defineProperty(Recipe, 'collection', {
 
 Recipe.find = function(cb){
   Recipe.collection.find().toArray(cb);
+};
+
+Recipe.create = function(obj, cb){
+  var r = new Recipe(obj);
+  Recipe.collection.save(r, cb);
 };
 
 module.exports = Recipe;

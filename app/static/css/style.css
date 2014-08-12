@@ -20,7 +20,20 @@ body {
   margin: 0 auto;
 }
 
-#recipes {
+input, textarea {
+  width: 250px;
+}
+#add {
+  margin-bottom: 5px;
+}
+
+#add > form {
+  border: 2px dashed black;
+  padding: 10px;
+  display: inline-block;
+}
+
+#recipes, #add {
   position: relative;
   text-align: center;
 }

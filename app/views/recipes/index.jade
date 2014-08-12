@@ -1,14 +1,30 @@
 extends ../shared/template
 block content
+  #add
+    #visibility
+      button#hide Hide Form
+      button#show Show Form
+    form(method='post', action='/recipes')
+      label Name:
+      br
+      input(name='name', type='text', placeholder='Chicken')
+      br
+      label Image:
+      br
+      input(name='photo', type='text', placeholder='URL')
+      br
+      label Ingredients:
+      br
+      input(name='ingredients', type='text', placeholder='chicken, salt, squash')
+      br
+      label Directions (seperate each step with ,)
+      br
+      textarea(name='directions', placeholder='Cook, eat, repeat')
+      br
+      button Add Recipe
   #recipes
     each recipe in recipes
-      .recipe
-        img(src='#{recipe.photo}', height='200', width='250')
-        div= recipe.name
-        ul
-          each ingredient in recipe.ingredients
-            li= ingredient
-        ol
-          each direction in recipe.directions
-            li= direction
+      include recipe
+
+block scripts
 
