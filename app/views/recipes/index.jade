@@ -1,0 +1,14 @@
+extends ../shared/template
+block content
+  #recipes
+    each recipe in recipes
+      .recipe
+        img(src='#{recipe.photo}', height='200', width='250')
+        div= recipe.name
+        ul
+          each ingredient in recipe.ingredients
+            li= ingredient
+        ol
+          each direction in recipe.directions
+            li= direction
+
