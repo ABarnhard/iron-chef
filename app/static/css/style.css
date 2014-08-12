@@ -24,6 +24,11 @@ body {
   position: relative;
   text-align: center;
 }
+
+#recipes > * {
+  vertical-align: top;
+}
+
 .recipe {
   display: inline-block;
   position: relative;
