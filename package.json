@@ -1,5 +1,5 @@
 {
-  "name": "Iron Chef",
+  "name": "iron-chef",
   "version": "0.0.1",
   "description": "A recipe management app",
   "main": "app/index.js",
