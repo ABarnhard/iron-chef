@@ -5,7 +5,7 @@
   .category= recipe.category
   ul
     each ingredient in recipe.ingredients
-      li= ingredient
+      li: a.ingredient(href='#')= ingredient
   ol
     each direction in recipe.directions
       li= direction

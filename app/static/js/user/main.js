@@ -9,7 +9,17 @@
     // event delegation, look it up!!!
     $('#recipes').on('click', '.delete', delRecipe);
     $('#filters a').click(filterCategory);
+    $('#recipes').on('click', '.ingredient', filterIngredient);
   });
+
+  function filterIngredient(e){
+    //debugger;
+    console.log('click');
+    var ingredient = $(this).text();
+    $('.recipe .ingredient:not(:contains(' + ingredient + '))').closest('.recipe').fadeOut();
+    $('.recipe .ingredient:contains(' + ingredient + ')').closest('.recipe').fadeIn();
+    e.preventDefault();
+  }
 
   function filterCategory(e){
     //debugger;
