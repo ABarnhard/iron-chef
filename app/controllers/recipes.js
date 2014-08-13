@@ -13,3 +13,10 @@ exports.create = function(req, res){
     res.render('recipes/recipe', {recipe:recipe});
   });
 };
+
+exports.destroy = function(req, res){
+  Recipe.remove(req.params.id, function(data){
+    res.send(data);
+  });
+};
+

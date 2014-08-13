@@ -20,8 +20,10 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-
-input, textarea {
+input, textarea, label{
+  display: block;
+}
+input, textarea, select {
   width: 250px;
 }
 #add {
@@ -34,9 +36,17 @@ input, textarea {
   display: inline-block;
 }
 
-#recipes, #add {
+#recipes, #add, #filters {
   position: relative;
   text-align: center;
+}
+
+#filters {
+  margin: 10px 0;
+}
+
+#filters a {
+  margin: 10px;
 }
 
 #recipes > * {
@@ -46,12 +56,12 @@ input, textarea {
 .recipe {
   display: inline-block;
   position: relative;
+  overflow: hidden;
   bottom: 5px;
   background-color: white;
   width: 300px;
   height: 650px;
   margin: 5px;
-  padding: 5px;
   border: 2px solid black;
   border-radius: 20px;
 }
@@ -62,6 +72,7 @@ input, textarea {
 }
 
 .recipe ul, .recipe ol {
+  padding: 5px;
   margin-left: 15px;
   text-align: left;
 }
@@ -79,4 +90,18 @@ input, textarea {
 .recipe li {
   margin-left: 5px;
   margin: 3px 0;
+}
+
+.recipe button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.photo {
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  width: 300px;
+  background-size: cover;
 }

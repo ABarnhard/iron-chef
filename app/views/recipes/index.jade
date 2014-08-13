@@ -6,22 +6,23 @@ block content
       button.orange#show Show Form
     form(method='post', action='/recipes')
       label Name:
-      br
       input(name='name', type='text', placeholder='Chicken')
-      br
       label Image:
-      br
       input(name='photo', type='text', placeholder='URL')
-      br
+      label Category
+      select(name='category')
+        option(value='breakfast') Breakfast
+        option(value='lunch') Lunch
+        option(value='dinner') Dinner
       label Ingredients:
-      br
       input(name='ingredients', type='text', placeholder='chicken, salt, squash')
-      br
       label Directions (seperate each step with ;)
-      br
-      textarea(name='directions', placeholder='Cook, eat, repeat')
-      br
+      textarea(name='directions', placeholder='Cook; eat; repeat')
       button.terq Add Recipe
+  #filters
+    a.breakfast(href='#') breakfast
+    a.lunch(href='#') lunch
+    a.dinner(href='#') dinner
   #recipes
     each recipe in recipes
       include recipe
