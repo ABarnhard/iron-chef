@@ -10,10 +10,16 @@
   function addRecipe(e){
     var data = $('form').serialize(),
         type = $('form').attr('method'),
-        url  = $('form').attr('action');
+        url  = $('form').attr('action'),
+        $r;
+    //$('input, textarea').val('');
+
     $.ajax({url:url, type:type, data:data, dataType:'html', success:function(html){
-      console.log('html', html);
-      $('#recipes').prepend(html);
+      // console.log('html', html);
+      $r = $(html);
+      $r.css('display', 'none');
+      $('#recipes').prepend($r);
+      $r.fadeIn(500);
     }});
     e.preventDefault();
   }

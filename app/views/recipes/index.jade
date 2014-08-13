@@ -2,8 +2,8 @@ extends ../shared/template
 block content
   #add
     #visibility
-      button#hide Hide Form
-      button#show Show Form
+      button.orange#hide Hide Form
+      button.orange#show Show Form
     form(method='post', action='/recipes')
       label Name:
       br
@@ -17,11 +17,11 @@ block content
       br
       input(name='ingredients', type='text', placeholder='chicken, salt, squash')
       br
-      label Directions (seperate each step with ,)
+      label Directions (seperate each step with ;)
       br
       textarea(name='directions', placeholder='Cook, eat, repeat')
       br
-      button Add Recipe
+      button.terq Add Recipe
   #recipes
     each recipe in recipes
       include recipe

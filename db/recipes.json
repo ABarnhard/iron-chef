@@ -1,5 +1,6 @@
 {
   "_id":{"$oid":"000000000000000000000001"},
+  "created":{"$date":1393653600000},
   "name":"BBQ Chicken",
   "photo":"http://www.foodlve.com/pictures/barbecue-chicken-recipe-14271427.jpg",
   "ingredients":["1 (3 1/2-pound) chicken, cut into 8 pieces", "salt", "freshly ground black pepper", "2 cups BBQ sauce"],
@@ -8,6 +9,7 @@
 
 {
   "_id":{"$oid":"000000000000000000000002"},
+  "created":{"$date":1393740000000},
   "name":"PBJ Protien Oats",
   "photo":"http://images.meredith.com/fitness/images/2011/12/ss_PBJ-oats.jpg",
   "ingredients":["1/3 cup old-fashioned oats", "2/3 cup water", "1 serving vanilla protein powder", "1/2 teaspoon vanilla bean paste or extract", "1 tablespoon natural peanut butter", "1 tablespoon natural jam or jelly"],
@@ -16,6 +18,7 @@
 
 {
   "_id":{"$oid":"000000000000000000000003"},
+  "created":{"$date":1393826400000},
   "name":"Greek Salad",
   "photo":"http://images.media-allrecipes.com/userphotos/250x250/00/96/19/961959.jpg",
   "ingredients":["1 head romaine lettuce- rinsed, dried and chopped", "1 red onion, thinly sliced", "1 (6 ounce) can pitted black olives", "1 green bell pepper, chopped", "1 red bell pepper, chopped", "2 large tomatoes, chopped", "1 cucumber, sliced", "1 cup crumbled feta cheese", "6 tablespoons olive oil", "1 teaspoon dried oregano", "1 lemon, juiced", "ground black pepper to taste"],
